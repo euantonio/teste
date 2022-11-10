@@ -19,11 +19,11 @@ final class PrimeiroDesafio
     public function calcularMulta()
     {
         if ($this->velocidade >= 50 AND $this->velocidade < 60) {
-            $this->valorAPagar = $this->valorMulta + ($this->multaAcima50 * 100 / 100);
+            $this->valorAPagar = $this->valorMulta + ($this->valorMulta * $this->multaAcima50 / 100);
         } elseif ($this->velocidade >= 60 AND $this->velocidade < 70){
-            $this->valorAPagar = $this->valorMulta + ($this->multaAcima60 * 100 / 100);
+            $this->valorAPagar = $this->valorMulta + ($this->valorMulta * $this->multaAcima60 / 100);
         } else {
-            $this->valorAPagar = $this->valorMulta + ($this->multaAcima70 * 100 / 100);
+            $this->valorAPagar = $this->valorMulta + ($this->valorMulta * $this->multaAcima70 / 100);
         }
 
         // Converte o valor para moeda brasileira
